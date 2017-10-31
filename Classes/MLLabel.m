@@ -67,6 +67,8 @@ static inline CGSize _MLLabel_CGSizePixelRound(CGSize size) {
 
 @property (nonatomic, strong) MLLabelStylePropertyRecord *styleRecord;
 
+
+
 //为什么需要这个，是因为setAttributedText之后内部可能会对其进行了改动，然后例如再次更新style属性，然后更新绘制会出问题。索性都以记录的最原始的为准。
 @property (nonatomic, copy) NSAttributedString *lastAttributedText;
 //读取的时候需要
